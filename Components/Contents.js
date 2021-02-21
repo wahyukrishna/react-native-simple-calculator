@@ -38,8 +38,13 @@ class Contents extends React.Component{
     }
 
     handleHitung = () => {
+        if(this.state.inputAngkaPertama && this.state.inputAngkaKedua != ""){
         this.setState({
         hasil: eval(this.state.inputAngkaPertama+this.state.operator+this.state.inputAngkaKedua)})
+        }
+        else{
+            alert("Masukkan Angka!")
+        }
       }
     
 
